@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>딸기 A - 상세 정보</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
+</head>
+<body id="page-top">
+    <div class="container-fluid">
+        <h3 class="text-dark mb-4">딸기 A - 상세 정보</h3>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <!-- 제품 정보 -->
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <img src="/assets/img/strawberry1.jpg" class="img-fluid" style="height: 300px; width: 100%;">
+                        <h4>딸기 A</h4>
+                        <p>1kg 당 40,000원</p>
+                        <p>판매자: 딸기맨</p>
+                        <p>딸기는 상큼하고 달콤한 맛으로 많은 사람들이 즐겨 찾는 과일입니다.</p>
+                        <button class="btn btn-primary" id="purchase-btn">결제하기</button>
+                        <button class="btn btn-success" id="add-to-cart-btn">장바구니</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <!-- 가격 비교 -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h6 class="text-primary fw-bold m-0">가격 비교</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">판매자 1: 40,000원</li>
+                            <li class="list-group-item">판매자 2: 45,000원</li>
+                            <li class="list-group-item">판매자 3: 50,000원</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 가격 추이 그래프 -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h6 class="text-primary fw-bold m-0">지난해 가격 추이</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-area">
+                            <canvas id="price-trend-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script>
+        // 가격 추이 데이터 가져오기 및 그래프 그리기
+        var ctx = document.getElementById("price-trend-chart");
+        var priceTrendChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "가격 추이",
+                    data: [35000, 37000, 39000, 40000, 42000, 43000, 44000, 45000, 46000, 47000, 48000, 49000],
+                    backgroundColor: "rgba(78, 115, 223, 0.05)",
+                    borderColor: "rgba(78, 115, 223, 1)"
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            color: "rgb(234, 236, 244)",
+                            zeroLineColor: "rgb(234, 236, 244)"
+                        },
+                        ticks: {
+                            fontColor: "#858796"
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            color: "rgb(234, 236, 244)",
+                            zeroLineColor: "rgb(234, 236, 244)"
+                        },
+                        ticks: {
+                            fontColor: "#858796"
+                        }
+                    }]
+                }
+            }
+        });
+
+        // 결제하기 버튼 이벤트
+        document.getElementById("purchase-btn").addEventListener("click", function() {
+            // 결제 페이지로 이동
+            window.location.href = "/payment.html";
+        });
+
+        // 장바구니 버튼 이벤트
+        document.getElementById("add-to-cart-btn").addEventListener("click", function() {
+            // 장바구니에 상품 추가하는 로직 작성
+            alert("장바구니에 상품이 추가되었습니다.");
+        });
+    </script>
+</body>
+</html>

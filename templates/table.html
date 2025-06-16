@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>판매자 랭킹</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>순위</th>
+            <th>판매자</th>
+            <th>평점</th>
+            <th>리뷰 수</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ranking in rankings %}
+        <tr>
+            <td>{{ ranking.ranking }}</td>
+            <td>{{ ranking.seller.username }}</td> <!-- 적절한 필드명으로 수정 -->
+            <td>{{ ranking.rating }}</td> <!-- 적절한 필드명으로 수정 -->
+            <td>{{ ranking.review_count }}</td> <!-- 적절한 필드명으로 수정 -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

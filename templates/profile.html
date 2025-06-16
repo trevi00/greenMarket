@@ -1,0 +1,13 @@
+<!-- myapp/templates/profile.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h2>내 프로필</h2>
+<p>이름: {{ user.username }}</p>
+<p>이메일: {{ user.email }}</p>
+<h3>주문 내역</h3>
+<ul>
+  {% for order in orders %}
+    <li>{{ order.order_date }} - {{ order.total_amount }}원</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필 - 그린옥션</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark bg-gradient-primary sidebar accordion p-0">
+            <div class="container-fluid d-flex flex-column">
+                <a class="navbar-brand sidebar-brand d-flex align-items-center" href="/index.html">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-laugh-wink"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">그린옥션</div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>타임세일</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/table.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span>판매자 랭킹</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login.html">
+                            <i class="far fa-user-circle"></i>
+                            <span>로그인</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>내 정보</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar static-top navbar-light">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                                    <span class="d-none d-lg-inline text-gray-600 small">사용자 이름</span>
+                                    <img class="border rounded-circle img-profile" src="/assets/img/avatars/avatar1.jpeg">
+                                </a>
+                                <div class="dropdown-menu shadow dropdown-menu-end">
+                                    <a class="dropdown-item" href="/profile.html">
+                                        <i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>
+                                        프로필
+                                    </a>
+                                    <a class="dropdown-item" href="/logout.html">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>
+                                        로그아웃
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">내 정보</h1>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-body text-center">
+                                    <img class="rounded-circle mb-3" src="/assets/img/avatars/avatar1.jpeg" width="150" height="150">
+                                    <h5 class="mt-3">사용자 이름</h5>
+                                    <button class="btn btn-primary mt-3" type="button">프로필 사진 변경</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label" for="username">닉네임</label>
+                                                <input class="form-control" type="text" id="username" name="username" value="사용자 닉네임">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" for="email">이메일</label>
+                                                <input class="form-control" type="email" id="email" name="email" value="user@example.com">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label" for="first_name">이름</label>
+                                                <input class="form-control" type="text" id="first_name" name="first_name" value="사용자 이름">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" for="last_name">성</label>
+                                                <input class="form-control" type="text" id="last_name" name="last_name" value="사용자 성">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label" for="role">역할</label>
+                                                <select class="form-control" id="role" name="role">
+                                                    <option value="buyer" selected>구매자</option>
+                                                    <option value="seller">판매자</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">저장하기</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright">Copyright © 그린옥션 2024</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+</body>
+</html>

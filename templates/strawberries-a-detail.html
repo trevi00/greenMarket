@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h3 class="text-dark mb-4">딸기 A - 상세 정보</h3>
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="{{ strawberry_a.image.url }}" class="img-fluid" alt="딸기 A">
+        </div>
+        <div class="col-lg-6">
+            <h4>딸기 A</h4>
+            <p>1kg 당 ₩{{ strawberry_a.price }}</p>
+            <p>판매자: {{ strawberry_a.seller }}</p>
+            <p>{{ strawberry_a.description }}</p>
+            <form method="post" action="{% url 'add_to_cart' strawberry_a.id %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="quantity">수량</label>
+                    <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1">
+                </div>
+                <button type="submit" class="btn btn-primary">장바구니에 추가</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'shop/base.html' %}
+{% block content %}
+<h2>Compare Prices</h2>
+<h3>Strawberries</h3>
+<ul>
+    {% for product in strawberries %}
+    <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+</ul>
+<h3>Shine Muscats</h3>
+<ul>
+    {% for product in shine_muscats %}
+    <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+

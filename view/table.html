@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판매자 랭킹 - 그린옥션</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- 로고 링크를 index.html로 설정 -->
+            <a class="navbar-brand" href="/index.html">그린옥션</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">타임세일</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login.html">로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>판매자 랭킹</h1>
+        <ul class="nav nav-tabs" id="rankingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="sales-tab" data-bs-toggle="tab" href="#sales" role="tab" aria-controls="sales" aria-selected="true">판매량</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="price-tab" data-bs-toggle="tab" href="#price" role="tab" aria-controls="price" aria-selected="false">가격</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="review-tab" data-bs-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">리뷰</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="rankingTabsContent">
+            <!-- 판매량 기준 랭킹 -->
+            <div class="tab-pane fade show active" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">판매량 기준 1위 판매자</h5>
+                        <p class="card-text">판매량: 1000</p>
+                    </div>
+                </div>
+                <!-- 더 많은 판매자 추가 -->
+            </div>
+            
+            <!-- 가격 기준 랭킹 -->
+            <div class="tab-pane fade" id="price" role="tabpanel" aria-labelledby="price-tab">
+                <div class="card mt-4">
+                    <div class의body">
+                        <h5 class="card-title">가격 기준 1위 판매자</h5>
+                        <p class="card-text">최저 가격: ￦25,000</p>
+                    </div>
+                </div>
+                <!-- 더 많은 판매자 추가 -->
+            </div>
+
+            <!-- 리뷰 기준 랭킹 -->
+            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">리뷰 기준 1위 판매자</h5>
+                        <p class="card-text">별점: 5.0</p>
+                    </div>
+                </div>
+                <!-- 더 많은 판매자 추가 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ username }}님의 프로필</h2>
+    <p>이메일: {{ email }}</p>
+    <p>판매자 여부: {% if is_seller %}판매자{% else %}구매자{% endif %}</p>
+    {% if is_seller %}
+        <p>판매자 순위: {{ ranking }}</p>
+    {% endif %}
+    <a href="{% url 'purchase_history' %}" class="btn btn-primary">구매 기록</a>
+    {% if is_seller %}
+        <a href="{% url 'submit_business_license' %}" class="btn btn-secondary">사업자 등록증 제출</a>
+    {% endif %}
+</div>
+{% endblock %}

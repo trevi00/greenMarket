@@ -1,0 +1,57 @@
+body {
+    background: #fff; /* 흰색 배경 */
+}
+
+.sidebar {
+    background: #d4edda; /* 밝은 연두색 */
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #c3e6cb;
+    color: #333;
+}
+
+.navbar-brand .sidebar-brand-icon {
+    color: #333;
+}
+
+#content-wrapper {
+    background: #f8f9fc;
+    margin-left: 250px; /* Sidebar width */
+    transition: all 0.3s;
+}
+
+#sidebar.collapsed {
+    left: -250px; /* Sidebar width */
+}
+
+#content-wrapper.collapsed {
+    margin-left: 0;
+}
+
+.sticky-footer {
+    background: #d4edda; /* 밝은 연두색 */
+    color: #333;
+}
+
+.scroll-to-top {
+    background: #56ab2f;
+    color: #fff;
+}
+
+/* Ensure the toggle button stays visible even when the sidebar is hidden */
+#sidebarToggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1030;
+}

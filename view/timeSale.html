@@ -1,0 +1,45 @@
+<!-- Main Page - Time Sale -->
+<div class="container">
+    <h3 class="text-dark mb-4">타임세일</h3>
+    <div class="row">
+        <!-- Featured products in the time sale -->
+        {% for product in featured_products %}
+        <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card h-100">
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top" src="{{ product.image_url }}" alt="{{ product.name }}">
+                </a>
+                <div class="card-body text-center">
+                    <h4>{{ product.name }}</h4>
+                    <p class="card-text">₩{{ product.discounted_price }} ({{ product.discount_percentage }}% 할인)</p>
+                    <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">장바구니에 추가</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Additional sections for top-selling items and promotions -->
+    <div class="row mt-4">
+        <div class="col-lg-6">
+            <h4>인기 상품</h4>
+            <ul class="list-group">
+                {% for product in popular_products %}
+                <li class="list-group-item">
+                    <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> - ₩{{ product.price }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <h4>프로모션 이벤트</h4>
+            <ul class="list-group">
+                {% for event in promotions %}
+                <li class="list-group-item">
+                    {{ event.title }} - {{ event.description }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

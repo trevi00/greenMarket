@@ -1,0 +1,18 @@
+{% extends 'shop/base.html' %}
+{% block content %}
+<h2>Price Trend for {{ product.name }}</h2>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Average Price</th>
+        <th>Predicted Price</th>
+    </tr>
+    {% for record in price_history %}
+    <tr>
+        <td>{{ record.date }}</td>
+        <td>{{ record.average_price }}</td>
+        <td>{{ record.predicted_price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

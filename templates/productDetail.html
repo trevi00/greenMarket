@@ -1,0 +1,11 @@
+<!-- myapp/templates/productDetail.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ product.name }}</h2>
+<p>{{ product.description }}</p>
+<p>{{ product.price }}원</p>
+<form method="post" action="{% url 'add_to_cart' product.id %}">
+  {% csrf_token %}
+  <button type="submit">장바구니에 추가</button>
+</form>
+{% endblock %}

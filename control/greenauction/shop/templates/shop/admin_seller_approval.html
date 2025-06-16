@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>판매자 승인</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>사용자명</th>
+                <th>이메일</th>
+                <th>사업자 등록증</th>
+                <th>승인</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for seller in pending_sellers %}
+            <tr>
+                <td>{{ seller.username }}</td>
+                <td>{{ seller.email }}</td>
+                <td><a href="{{ seller.business_license.url }}" target="_blank">보기</a></td>
+                <td>
+                    <form method="post" action="{% url 'approve_seller' seller.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success">승인</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

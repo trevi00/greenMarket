@@ -1,0 +1,10 @@
+<!-- myapp/templates/payment.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h2>결제</h2>
+<p>총 금액: {{ total_amount }}원</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">결제하기</button>
+</form>
+{% endblock %}

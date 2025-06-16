@@ -1,0 +1,45 @@
+<!-- Product Detail Page -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ product.image_url }}" class="img-fluid" alt="{{ product.name }}">
+        </div>
+        <div class="col-md-6">
+            <h3>{{ product.name }}</h3>
+            <p>₩{{ product.price }}</p>
+            <p>{{ product.description }}</p>
+            <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">장바구니에 추가</a>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h4>가격 비교</h4>
+            <!-- 가격 비교 테이블 -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>판매자</th>
+                        <th>가격</th>
+                        <th>리뷰</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for seller in product.sellers %}
+                    <tr>
+                        <td>{{ seller.name }}</td>
+                        <td>₩{{ seller.price }}</td>
+                        <td>{{ seller.review }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h4>전년도 가격 그래프</h4>
+            <!-- 전년도 가격 그래프 -->
+            <canvas id="price_chart"></canvas>
+        </div>
+    </div>
+</div>

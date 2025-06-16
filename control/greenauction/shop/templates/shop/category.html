@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}카테고리{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>카테고리</h2>
+    <h3>딸기</h3>
+    <ul>
+        {% for product in strawberries %}
+            <li>{{ product.name }} - {{ product.price }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>샤인머스캣</h3>
+    <ul>
+        {% for product in shine_muscats %}
+            <li>{{ product.name }} - {{ product.price }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

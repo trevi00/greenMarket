@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}로그인{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>로그인</h2>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_username">사용자 이름:</label>
+            <input type="text" name="username" required id="id_username" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="id_password">비밀번호:</label>
+            <input type="password" name="password" required id="id_password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">로그인</button>
+    </form>
+    <p><a href="{% url 'password_reset' %}">비밀번호를 잊으셨나요?</a></p>
+    <p>계정이 없으신가요? <a href="{% url 'register' %}">회원가입</a></p>
+</div>
+{% endblock %}

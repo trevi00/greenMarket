@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}판매자 랭킹{% endblock %}
+
+{% block content %}
+<h2>판매자 랭킹</h2>
+<table>
+    <thead>
+        <tr>
+            <th>판매자</th>
+            <th>총 판매량</th>
+            <th>평균 별점</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for seller in sellers %}
+        <tr>
+            <td>{{ seller.username }}</td>
+            <td>{{ seller.total_sales }}</td>
+            <td>{{ seller.avg_rating }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

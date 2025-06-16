@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - 그린옥션</title>
+    <meta name="description" content="더 좋은 농수산물들을 더 싸게 더 많게">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>그린옥션</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html"><i class="fas fa-tachometer-alt"></i><span>타임세일</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login.html"><i class="far fa-user-circle"></i><span>로그인</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/profile.html"><i class="fas fa-user"></i><span>내정보</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/table.html"><i class="fas fa-user-circle"></i><span>판매자 랭킹</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/cart.html"><i class="fas fa-table"></i><span>장바구니</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/categori.html"><i class="fas fa-window-maximize"></i><span>카테고리</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar static-top navbar-light">
+                    <div class="container-fluid">
+                        <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                                        <span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">알림 센터</h6>
+                                        <a class="dropdown-item d-flex align-items-center" href="#"><div class="me-3"><div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div></div><div><span class="small text-gray-500">월간 보고서가 준비되었습니다!</span></div></a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#"><div class="me-3"><div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div></div><div><span class="small text-gray-500">예치금이 입금되었습니다!</span></div></a>
+                                        <a class="dropdown-item text-center small text-gray-500" href="#">모든 알림 보기</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">인기 품목을 한번에</h3>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>1위 품목 :&nbsp;</span><span>딸기</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>￦40,000</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-success py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2"><div class="text-uppercase text-success fw-bold text-xs mb-1"><span>2위 품목 :&nbsp;</span><span>샤인머스캣</span></div></div>
+                                        <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2"><div class="text-uppercase text-info fw-bold text-xs mb-1"><span>3위 품목</span></div></div>
+                                        <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters"><div class="col me-2"><div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>이달의 판매왕 :&nbsp;</span><span>장원영</span></div></div></div>
+                                    <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 차트 영역 -->
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0">1위 품목 그래프</h6>
+                                    <div class="dropdown no-arrow">
+                                        <button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in"><p class="text-center dropdown-header">옵션:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;가격&quot;,&quot;fill&quot;:true,&quot;data&quot;:[0, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]} }"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center"><h6 class="text-primary fw-bold m-0">검색 데이터</h6></div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Direct&quot;,&quot;Social&quot;,&quot;Referral&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#4e73df&quot;,&quot;#1cc88a&quot;,&quot;#36b9cc&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;50&quot;,&quot;30&quot;,&quot;15&quot;]}]}}" ></canvas>
+                                    </div>
+                                    <div class="text-center small mt-4">
+                                        <span class="me-2"><i class="fas fa-circle text-primary"></i>&nbsp;Direct</span>
+                                        <span class="me-2"><i class="fas fa-circle text-success"></i>&nbsp;Social</span>
+                                        <span class="me-2"><i class="fas fa-circle text-info"></i>&nbsp;Referral</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 해시태그별 최고 판매자 -->
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary fw-bold m-0">해시태그별 최고 판매자</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small fw-bold">딸기맨<span class="float-end">리뷰</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                    </div>
+                                    <h4 class="small fw-bold">딸기딸기<span class="float-end">판매량</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                    </div>
+                                    <h4 class="small fw-bold">샤캣딸기<span class="float-end">품질</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                    </div>
+                                    <h4 class="small fw-bold">정직딸기<span class="float-end">가격</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="card text-white bg-primary shadow">
+                                <div class="card-body">
+                                    <p class="m-0">딸기딸기</p><p class="text-white-50 small m-0">#판매량</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4"><div class="card text-white bg-success shadow"><div class="card-body"><p class="m-0">정직딸기</p><p class="text-white-50 small m-0">#가격</p></div></div></div>
+                        <div class="col-lg-6 mb-4"><div class="card text-white bg-info shadow"><div class="card-body"><p class="m-0">샤캣딸기</p><p class="text-white-50 small m-0">#품질</p></div></div></div>
+                        <div class="col-lg-6 mb-4"><div class="card text-white bg-warning shadow"><div class="card-body"><p class="m-0">딸기맨</p><p class="text-white-50 small m-0">#리뷰</p></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright">
+                    <span>Copyright © 그린옥션 2024</span>
+                </div>
+            </div>
+        </footer>
+        
+        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+</body>
+</html>

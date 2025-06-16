@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ product.name }}</h2>
+    <p>가격: {{ product.price }}원</p>
+    <p>판매자: {{ product.seller.username }}</p>
+    <p>총 판매량: {{ total_sales }}</p>
+    <p>최근 7일간 가격 변화: {{ price_changes }}</p>
+    <p>최근 7일간 판매량 변화: {{ sales_changes }}</p>
+
+    <form method="post" action="{% url 'add_to_cart' product.id %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">장바구니에 담기</button>
+    </form>
+    <form method="post" action="{% url 'buy_now' product.id %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">바로 구매하기</button>
+    </form>
+
+    <h3>리뷰</h3>
+    {% for review in reviews %}
+        <div>
+            <strong>{{ review.user.username }}</strong>
+            <p>{{ review.content }}</p>
+            <p>평점: {{ review.rating }}</p>
+            {% if review.user == user %}
+                <a href="{% url 'review_edit' review.id %}">리뷰 수정</a>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    {% if user.is_authenticated and has_purchased %}
+        <h3>리뷰 작성</h3>
+        <form method="post" action="{% url 'product_detail' product.id %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">리뷰 작성</button>
+        </form>
+    {% else %}
+        <p>이 상품을 구매한 경우에만 리뷰를 작성할 수 있습니다.</p>
+    {% endif %}
+</div>
+{% endblock %}

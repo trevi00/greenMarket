@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>장바구니</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>상품</th>
+                <th>수량</th>
+                <th>가격</th>
+                <th>조정</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.product.name }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.total_price }}원</td>
+                <td>
+                    <a href="{% url 'update_cart' order.id 'increase' %}" class="btn btn-sm btn-success">+</a>
+                    <a href="{% url 'update_cart' order.id 'decrease' %}" class="btn btn-sm btn-warning">-</a>
+                </td>
+                <td>
+                    <a href="{% url 'update_cart' order.id 'remove' %}" class="btn btn-sm btn-danger">삭제</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3>총 합계: {{ total_cost }}원</h3>
+    <form method="post" action="{% url 'checkout' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">구매하기</button>
+    </form>
+</div>
+{% endblock %}

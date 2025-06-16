@@ -1,0 +1,12 @@
+<!-- myapp/templates/product.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h2>상품 목록</h2>
+<ul>
+  {% for product in products %}
+    <li>
+      <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> - {{ product.price }}원
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

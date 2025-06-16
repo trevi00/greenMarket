@@ -1,0 +1,15 @@
+<!-- myapp/templates/myapp/category_product_list.html -->
+
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+    <h1>Category: {{ category.name }}</h1>
+    <ul>
+        {% for product in products %}
+            <li>
+                <a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a> - {{ product.price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'product_list' %}">Back to product list</a>
+{% endblock %}
